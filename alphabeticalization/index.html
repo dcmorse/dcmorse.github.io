@@ -5190,7 +5190,104 @@ var $author$project$Main$update = F2(
 var $author$project$Main$Change = function (a) {
 	return {$: 'Change', a: a};
 };
+var $elm$core$Basics$composeR = F3(
+	function (f, g, x) {
+		return g(
+			f(x));
+	});
+var $elm$core$String$concat = function (strings) {
+	return A2($elm$core$String$join, '', strings);
+};
+var $author$project$Main$mapIf = F2(
+	function (testFn, fn) {
+		return $elm$core$List$map(
+			function (x) {
+				return testFn(x) ? fn(x) : x;
+			});
+	});
+var $elm$core$String$fromList = _String_fromList;
+var $elm$core$List$sortBy = _List_sortBy;
+var $elm$core$List$sort = function (xs) {
+	return A2($elm$core$List$sortBy, $elm$core$Basics$identity, xs);
+};
+var $elm$core$String$foldr = _String_foldr;
+var $elm$core$String$toList = function (string) {
+	return A3($elm$core$String$foldr, $elm$core$List$cons, _List_Nil, string);
+};
+var $author$project$Main$sortLetters = A2(
+	$elm$core$Basics$composeR,
+	$elm$core$String$toList,
+	A2($elm$core$Basics$composeR, $elm$core$List$sort, $elm$core$String$fromList));
+var $elm$core$String$cons = _String_cons;
+var $elm$core$String$fromChar = function (_char) {
+	return A2($elm$core$String$cons, _char, '');
+};
+var $elm$core$Basics$not = _Basics_not;
+var $elm$core$String$reverse = _String_reverse;
+var $author$project$Main$chunkRecursively = F4(
+	function (finishedChunks, inWordMode, reversedCharsInChunk, text) {
+		chunkRecursively:
+		while (true) {
+			var newFinishedChunks = function (_v2) {
+				return A2(
+					$elm$core$List$cons,
+					$elm$core$String$reverse(reversedCharsInChunk),
+					finishedChunks);
+			};
+			var _v0 = $elm$core$String$uncons(text);
+			if (_v0.$ === 'Nothing') {
+				return $elm$core$List$reverse(
+					newFinishedChunks(_Utils_Tuple0));
+			} else {
+				var _v1 = _v0.a;
+				var c = _v1.a;
+				var shortenedText = _v1.b;
+				if (_Utils_eq(
+					inWordMode,
+					$elm$core$Char$isAlpha(c))) {
+					var $temp$finishedChunks = finishedChunks,
+						$temp$inWordMode = inWordMode,
+						$temp$reversedCharsInChunk = A2($elm$core$String$cons, c, reversedCharsInChunk),
+						$temp$text = shortenedText;
+					finishedChunks = $temp$finishedChunks;
+					inWordMode = $temp$inWordMode;
+					reversedCharsInChunk = $temp$reversedCharsInChunk;
+					text = $temp$text;
+					continue chunkRecursively;
+				} else {
+					var $temp$finishedChunks = newFinishedChunks(_Utils_Tuple0),
+						$temp$inWordMode = !inWordMode,
+						$temp$reversedCharsInChunk = $elm$core$String$fromChar(c),
+						$temp$text = shortenedText;
+					finishedChunks = $temp$finishedChunks;
+					inWordMode = $temp$inWordMode;
+					reversedCharsInChunk = $temp$reversedCharsInChunk;
+					text = $temp$text;
+					continue chunkRecursively;
+				}
+			}
+		}
+	});
+var $author$project$Main$splitAtWordBoundaries = A3($author$project$Main$chunkRecursively, _List_Nil, true, '');
+var $author$project$Main$stringStartsWithLetter = function (str) {
+	var _v0 = $elm$core$String$uncons(str);
+	if (_v0.$ === 'Nothing') {
+		return false;
+	} else {
+		var _v1 = _v0.a;
+		var c = _v1.a;
+		return $elm$core$Char$isAlpha(c);
+	}
+};
+var $author$project$Main$alphabeticalization = A2(
+	$elm$core$Basics$composeR,
+	$author$project$Main$splitAtWordBoundaries,
+	A2(
+		$elm$core$Basics$composeR,
+		A2($author$project$Main$mapIf, $author$project$Main$stringStartsWithLetter, $author$project$Main$sortLetters),
+		$elm$core$String$concat));
 var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$input = _VirtualDom_node('input');
 var $elm$html$Html$Events$alwaysStop = function (x) {
 	return _Utils_Tuple2(x, true);
@@ -5235,22 +5332,36 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$placeholder = $elm$html$Html$Attributes$stringProperty('placeholder');
-var $elm$core$String$reverse = _String_reverse;
+var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
+var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $elm$html$Html$Attributes$value = $elm$html$Html$Attributes$stringProperty('value');
 var $author$project$Main$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
 		_List_fromArray(
 			[
+				A2($elm$html$Html$Attributes$style, 'margin', '5%')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$h1,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Alphabeticalization')
+					])),
 				A2(
 				$elm$html$Html$input,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$placeholder('Text to reverse'),
+						$elm$html$Html$Attributes$placeholder('type some words to translate'),
 						$elm$html$Html$Attributes$value(model.content),
+						A2($elm$html$Html$Attributes$style, 'box-sizing', 'border-box'),
+						A2($elm$html$Html$Attributes$style, 'width', '90%'),
+						A2($elm$html$Html$Attributes$style, 'margin-bottom', '20px'),
 						$elm$html$Html$Events$onInput($author$project$Main$Change)
 					]),
 				_List_Nil),
@@ -5260,7 +5371,7 @@ var $author$project$Main$view = function (model) {
 				_List_fromArray(
 					[
 						$elm$html$Html$text(
-						$elm$core$String$reverse(model.content))
+						$author$project$Main$alphabeticalization(model.content))
 					]))
 			]));
 };
