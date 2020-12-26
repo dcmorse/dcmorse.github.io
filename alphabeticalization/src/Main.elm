@@ -91,7 +91,7 @@ chunkRecursively finishedChunks inWordMode reversedCharsInChunk text =
         newFinishedChunks () =
             String.reverse reversedCharsInChunk :: finishedChunks
     in case String.uncons text of
-        Nothing -> List.reverse <| newFinishedChunks ()
+        Nothing -> newFinishedChunks () |> List.reverse
         Just (c, shortenedText) ->
             if inWordMode == isAlpha c
             then chunkRecursively finishedChunks inWordMode (String.cons c reversedCharsInChunk) shortenedText
