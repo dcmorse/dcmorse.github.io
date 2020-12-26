@@ -1,3 +1,9 @@
+-- compile with hints at
+-- https://github.com/elm/compiler/blob/master/hints/optimize.md
+-- but really I was too lazy to use uglifier and just did
+--
+--   elm make src/Main.elm --optimize
+
 module Main exposing (..)
 import Browser
 import Html exposing (Html, Attribute, h1, div, input, text)
@@ -90,12 +96,6 @@ chunkRecursively finishedChunks inWordMode reversedCharsInChunk text =
             if inWordMode == isAlpha c
             then chunkRecursively finishedChunks inWordMode (String.cons c reversedCharsInChunk) shortenedText
             else chunkRecursively (newFinishedChunks ()) (not inWordMode) (String.fromChar c) shortenedText
-
-reverseIfLetters : String -> String
-reverseIfLetters str =
-    if stringStartsWithLetter str
-    then String.reverse str
-    else str
 
 stringStartsWithLetter : String -> Bool
 stringStartsWithLetter str =
