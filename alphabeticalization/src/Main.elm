@@ -54,7 +54,7 @@ view model =
           [ Html.Attributes.placeholder "type some words to translate"
           , Html.Attributes.value model.content
           , Html.Attributes.style "box-sizing" "border-box"
-          , Html.Attributes.style "width" "90%"
+          , Html.Attributes.style "width" "33em"
           , Html.Attributes.style "margin-bottom" "20px"
           , onInput Change ]
           []
