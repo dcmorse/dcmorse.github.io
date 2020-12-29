@@ -95,8 +95,8 @@ capitalizationMask : String -> List Bool
 capitalizationMask = String.toList >> map isUpper
 
 applyCapitalizationMask : List Bool -> String -> String
-applyCapitalizationMask mask string =
-    map2 massageCharacterCase mask (String.toList string) |> String.fromList
+applyCapitalizationMask mask =
+    String.toList >> map2 massageCharacterCase mask >> String.fromList
 
 massageCharacterCase : Bool -> Char -> Char
 massageCharacterCase beUpper =
