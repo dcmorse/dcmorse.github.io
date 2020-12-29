@@ -9,8 +9,8 @@ import Browser
 import Html exposing (Html, Attribute, h1, div, input, text)
 import Html.Events exposing (onInput)
 import Html.Attributes
-import Char exposing (isAlpha)
-import List exposing (sort, map)
+import Char exposing (isAlpha, isUpper, toUpper, toLower)
+import List exposing (sort, map, map2)
 
 -- MAIN
 
@@ -71,11 +71,36 @@ view model =
 -- ALPHABETICALIZATION
 
 alphabeticalization : String -> String
-alphabeticalization = splitAtWordBoundaries >> mapIf stringStartsWithLetter sortLetters >> String.concat
+alphabeticalization = splitAtWordBoundaries >> map alphabeticalizeStringsStartingWithLetters >> String.concat
 
-mapIf : (x -> Bool) -> (x -> x) -> List x -> List x
-mapIf testFn fn =
-    map (\x -> if testFn x then fn x else x)
+-- Eyeing the possibility of converting the primary word datatype from
+-- String to List Char. I'm currently doing a lot of conversion
+-- to/from List Char, and the only thing I think I'm getting is one
+-- call to String.toLower, which could be map Char.toLower.
+
+alphabeticalizeStringsStartingWithLetters : String -> String
+alphabeticalizeStringsStartingWithLetters s =
+    if stringStartsWithLetter s then scrambleWord s else s
+
+scrambleWord : String -> String
+scrambleWord word =
+    let
+        capsMask =
+            capitalizationMask word
+        lowerCaseScramble =
+            word |> String.toLower |> sortLetters
+    in applyCapitalizationMask capsMask lowerCaseScramble
+
+capitalizationMask : String -> List Bool
+capitalizationMask = String.toList >> map isUpper
+
+applyCapitalizationMask : List Bool -> String -> String
+applyCapitalizationMask mask string =
+    map2 massageCharacterCase mask (String.toList string) |> String.fromList
+
+massageCharacterCase : Bool -> Char -> Char
+massageCharacterCase beUpper =
+    if beUpper then toUpper else toLower
 
 sortLetters : String -> String
 sortLetters =

@@ -5182,34 +5182,65 @@ var $author$project$Main$update = F2(
 			{z: newContent});
 	});
 var $author$project$Main$Change = $elm$core$Basics$identity;
-var $elm$core$Basics$composeR = F3(
-	function (f, g, x) {
-		return g(
-			f(x));
-	});
-var $elm$core$String$concat = function (strings) {
-	return A2($elm$core$String$join, '', strings);
-};
-var $author$project$Main$mapIf = F2(
-	function (testFn, fn) {
-		return $elm$core$List$map(
-			function (x) {
-				return testFn(x) ? fn(x) : x;
-			});
-	});
 var $elm$core$String$fromList = _String_fromList;
-var $elm$core$List$sortBy = _List_sortBy;
-var $elm$core$List$sort = function (xs) {
-	return A2($elm$core$List$sortBy, $elm$core$Basics$identity, xs);
+var $elm$core$Char$toLower = _Char_toLower;
+var $elm$core$Char$toUpper = _Char_toUpper;
+var $author$project$Main$massageCharacterCase = function (beUpper) {
+	return beUpper ? $elm$core$Char$toUpper : $elm$core$Char$toLower;
 };
 var $elm$core$String$foldr = _String_foldr;
 var $elm$core$String$toList = function (string) {
 	return A3($elm$core$String$foldr, $elm$core$List$cons, _List_Nil, string);
 };
+var $author$project$Main$applyCapitalizationMask = F2(
+	function (mask, string) {
+		return $elm$core$String$fromList(
+			A3(
+				$elm$core$List$map2,
+				$author$project$Main$massageCharacterCase,
+				mask,
+				$elm$core$String$toList(string)));
+	});
+var $elm$core$Basics$composeR = F3(
+	function (f, g, x) {
+		return g(
+			f(x));
+	});
+var $author$project$Main$capitalizationMask = A2(
+	$elm$core$Basics$composeR,
+	$elm$core$String$toList,
+	$elm$core$List$map($elm$core$Char$isUpper));
+var $elm$core$List$sortBy = _List_sortBy;
+var $elm$core$List$sort = function (xs) {
+	return A2($elm$core$List$sortBy, $elm$core$Basics$identity, xs);
+};
 var $author$project$Main$sortLetters = A2(
 	$elm$core$Basics$composeR,
 	$elm$core$String$toList,
 	A2($elm$core$Basics$composeR, $elm$core$List$sort, $elm$core$String$fromList));
+var $elm$core$String$toLower = _String_toLower;
+var $author$project$Main$scrambleWord = function (word) {
+	var lowerCaseScramble = $author$project$Main$sortLetters(
+		$elm$core$String$toLower(word));
+	var capsMask = $author$project$Main$capitalizationMask(word);
+	return A2($author$project$Main$applyCapitalizationMask, capsMask, lowerCaseScramble);
+};
+var $author$project$Main$stringStartsWithLetter = function (str) {
+	var _v0 = $elm$core$String$uncons(str);
+	if (_v0.$ === 1) {
+		return false;
+	} else {
+		var _v1 = _v0.a;
+		var c = _v1.a;
+		return $elm$core$Char$isAlpha(c);
+	}
+};
+var $author$project$Main$alphabeticalizeStringsStartingWithLetters = function (s) {
+	return $author$project$Main$stringStartsWithLetter(s) ? $author$project$Main$scrambleWord(s) : s;
+};
+var $elm$core$String$concat = function (strings) {
+	return A2($elm$core$String$join, '', strings);
+};
 var $elm$core$String$cons = _String_cons;
 var $elm$core$String$fromChar = function (_char) {
 	return A2($elm$core$String$cons, _char, '');
@@ -5261,22 +5292,12 @@ var $author$project$Main$chunkRecursively = F4(
 		}
 	});
 var $author$project$Main$splitAtWordBoundaries = A3($author$project$Main$chunkRecursively, _List_Nil, true, '');
-var $author$project$Main$stringStartsWithLetter = function (str) {
-	var _v0 = $elm$core$String$uncons(str);
-	if (_v0.$ === 1) {
-		return false;
-	} else {
-		var _v1 = _v0.a;
-		var c = _v1.a;
-		return $elm$core$Char$isAlpha(c);
-	}
-};
 var $author$project$Main$alphabeticalization = A2(
 	$elm$core$Basics$composeR,
 	$author$project$Main$splitAtWordBoundaries,
 	A2(
 		$elm$core$Basics$composeR,
-		A2($author$project$Main$mapIf, $author$project$Main$stringStartsWithLetter, $author$project$Main$sortLetters),
+		$elm$core$List$map($author$project$Main$alphabeticalizeStringsStartingWithLetters),
 		$elm$core$String$concat));
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
