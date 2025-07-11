@@ -1,0 +1,73 @@
+# Site settings
+title: David Morse
+# email: your-email@domain.com
+description: "Let's make the world better, using computers!"
+keywords: "React.js, Python, Haskell, AWS, Azure, GitOps, Kubernetes, Terraform, contractor"
+skills: "Web Developer - DevOps Engineer - Freelance Problem Solver"
+meta_author: Morse David
+
+content:
+  p1: "Dave Morse has been serving Saint Louis since 2016, first as a staff developer at the non-profit LaunchCode, then as a engineer at World Wide Technology."
+  p2: "Now he helps organizations seeking to make our community better through bespoke computer programming. Got an idea? Hit him up!"
+# Google webmaster tools
+google_verify:
+
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Contact form:
+# - static : pass through formspree.io to validate email sending
+# - disqus : replace contact form by disqus thread
+# - comment the line below if you want to stick with the default PHP contact form
+contact: static
+formspree_url: "https://formspree.io/f/xkgbazwr"
+
+
+# If you use disqus you need disqus shortname
+# https://help.disqus.com/customer/portal/articles/466208
+# disqus_shortname: myshortname
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: 18bc9c #80B3FF
+  primary-rgb: "24,288,156" #"128,179,255"
+  secondary: 2c3e50 #FD6E8A
+  secondary-dark: 233140 #A2122F
+
+# Footer settings
+footer:
+  copyright: David Morse
+  location: Whereabouts
+  social: Social Media
+  credits: Site Architecture
+
+address:
+  - line: 'Saint Louis City'
+  - line: 'Missouri'
+  - line: 'United States'
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: github
+    url: http://github.com/dcmorse
+  - title: linkedin
+    url: https://www.linkedin.com/in/morsecode/
+
+# Credits content
+credits:
+  - line: '<a href="https://pages.github.com/">github pages</a> static hosting'
+  - line: '<a href="https://jekyllrb.com/">jekyll</a> html compiler'
+  - line: '<a href="https://github.com/jeromelachaud/freelancer-theme">freelancer</a> theme'
+# 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+#for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: ""
