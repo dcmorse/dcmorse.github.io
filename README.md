@@ -10,7 +10,7 @@ Then run previews with:
 docker exec -it jekyll sh -c 'bundle config set --local path 'vendor/bundle'  && bundle exec jekyll serve --host 0.0.0.0 --livereload'
 ```
 Note that '--livereload' does not.
-```
+
 At the end of the day, clean up the container with something like:
 ```
 docker kill jekyll
