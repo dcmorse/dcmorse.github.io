@@ -19,11 +19,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          bundle config set --local path 'vendor/bundle'
+          git config --system --add safe.directory /__w/dcmorse.github.io/dcmorse.github.io
+          git config --list --show-origin
+          bundle config set --local path '/tmp/bundle'
           bundle install
 
       - name: Build Jekyll site
-        run: bundle exec jekyll build
+        run: |
+          install -d -o jekyll -g jekyll /__w/dcmorse.github.io/dcmorse.github.io/_site
+          bundle exec jekyll build --disable-disk-cache
+          ls -al /__w/dcmorse.github.io/dcmorse.github.io/_site
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
