@@ -1,0 +1,33 @@
+name: Build and Deploy Jekyll site
+
+on:
+  push:
+    branches:
+      - portfolio
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # Use your exact Docker image by digest
+    container:
+      image: jekyll/jekyll@sha256:400b8d1569f118bca8a3a09a25f32803b00a55d1ea241feaf5f904d66ca9c625
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          bundle config set --local path 'vendor/bundle'
+          bundle install
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+
