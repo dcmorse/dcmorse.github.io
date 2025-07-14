@@ -1,5 +1,8 @@
 # dcmorse portfolio website
 
+## This site should auto-build when pushed to branch 'main', see the 'actions' tab in github for build details. 
+
+## Local Preview
 
 Fire a container with:
 ```
