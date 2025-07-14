@@ -56,9 +56,9 @@ social:
 # Credits content
 credits:
   - line: '<a href="https://pages.github.com/">github pages</a> static hosting'
+  - line: '<a href="https://github.com/features/actions">github actions</a> CD'
   - line: '<a href="https://jekyllrb.com/">jekyll</a> html compiler'
   - line: '<a href="https://github.com/jeromelachaud/freelancer-theme">freelancer</a> theme'
-# 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
 
 # Build settings
 markdown: kramdown
