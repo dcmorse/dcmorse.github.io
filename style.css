@@ -23,6 +23,35 @@
 }
   
 
+/* Grid approach for perfect alignment with text wrapping */
+dl.grid-style {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5em 0;
+    align-items: start; /* Changed from baseline to start */
+  }
+
+dl.grid-style dt {
+    grid-column: 1;
+    font-weight: normal;
+    margin-right: 0;
+    float: none;
+    clear: none;
+    text-align: right;
+}
+
+dl.grid-style dt::after {
+    content: ':';
+    margin-right: 1em;
+}
+
+dl.grid-style dd {
+    grid-column: 2;
+    font-weight: bold;
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: left;
+}
 
 /*!
  * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
