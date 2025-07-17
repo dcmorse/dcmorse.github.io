@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
   <link href="/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2025-07-15T18:45:11-05:00</updated>
+  <updated>2025-07-17T08:36:23-05:00</updated>
   <id>/</id>
 
   
@@ -18,6 +18,74 @@
   
 
   
+  
+    <entry>
+      <title type="html">Bazaar</title>
+      <link href="/portfolio/bazaar/" rel="alternate" type="text/html" title="Bazaar" />
+      <published>2022-10-15T00:00:00-05:00</published>
+      <updated>2022-10-15T00:00:00-05:00</updated>
+      <id>/portfolio/bazaar</id>
+      <content type="html" xml:base="/portfolio/bazaar/"></content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name></name>
+        
+        
+      </author>
+
+      
+        <category term="Observability, CI/CD, DevOps, ETL, Full-Stack Web Development" />
+      
+
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Pizza</title>
+      <link href="/portfolio/pizza/" rel="alternate" type="text/html" title="Pizza" />
+      <published>2021-01-01T00:00:00-06:00</published>
+      <updated>2021-01-01T00:00:00-06:00</updated>
+      <id>/portfolio/pizza</id>
+      <content type="html" xml:base="/portfolio/pizza/"></content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name></name>
+        
+        
+      </author>
+
+      
+        <category term="Internationalization, Front End Web Development" />
+      
+
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Super Movies</title>
@@ -54,12 +122,12 @@
     </entry>
   
     <entry>
-      <title type="html">Contradb</title>
-      <link href="/portfolio/contradb/" rel="alternate" type="text/html" title="Contradb" />
+      <title type="html">Dance</title>
+      <link href="/portfolio/dance/" rel="alternate" type="text/html" title="Dance" />
       <published>2015-07-16T00:00:00-05:00</published>
       <updated>2015-07-16T00:00:00-05:00</updated>
-      <id>/portfolio/contradb</id>
-      <content type="html" xml:base="/portfolio/contradb/"></content>
+      <id>/portfolio/dance</id>
+      <content type="html" xml:base="/portfolio/dance/"></content>
 
       
       
@@ -88,12 +156,12 @@
     </entry>
   
     <entry>
-      <title type="html">Project 3</title>
-      <link href="/portfolio/project-3/" rel="alternate" type="text/html" title="Project 3" />
-      <published>2014-07-16T00:00:00-05:00</published>
-      <updated>2014-07-16T00:00:00-05:00</updated>
-      <id>/portfolio/project-3</id>
-      <content type="html" xml:base="/portfolio/project-3/"></content>
+      <title type="html">Game</title>
+      <link href="/portfolio/game/" rel="alternate" type="text/html" title="Game" />
+      <published>2000-10-09T00:00:00-05:00</published>
+      <updated>2000-10-09T00:00:00-05:00</updated>
+      <id>/portfolio/game</id>
+      <content type="html" xml:base="/portfolio/game/"></content>
 
       
       
@@ -108,109 +176,7 @@
       </author>
 
       
-        <category term="Web Development" />
-      
-
-      
-
-      
-        <summary type="html"></summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Project 4</title>
-      <link href="/portfolio/project-4/" rel="alternate" type="text/html" title="Project 4" />
-      <published>2014-07-15T00:00:00-05:00</published>
-      <updated>2014-07-15T00:00:00-05:00</updated>
-      <id>/portfolio/project-4</id>
-      <content type="html" xml:base="/portfolio/project-4/"></content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name></name>
-        
-        
-      </author>
-
-      
-        <category term="Web Development" />
-      
-
-      
-
-      
-        <summary type="html"></summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Project 6</title>
-      <link href="/portfolio/project-6/" rel="alternate" type="text/html" title="Project 6" />
-      <published>2014-07-15T00:00:00-05:00</published>
-      <updated>2014-07-15T00:00:00-05:00</updated>
-      <id>/portfolio/project-6</id>
-      <content type="html" xml:base="/portfolio/project-6/"></content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name></name>
-        
-        
-      </author>
-
-      
-        <category term="Web Development" />
-      
-
-      
-
-      
-        <summary type="html"></summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Project 5</title>
-      <link href="/portfolio/project-5/" rel="alternate" type="text/html" title="Project 5" />
-      <published>2014-07-14T00:00:00-05:00</published>
-      <updated>2014-07-14T00:00:00-05:00</updated>
-      <id>/portfolio/project-5</id>
-      <content type="html" xml:base="/portfolio/project-5/"></content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name></name>
-        
-        
-      </author>
-
-      
-        <category term="Web Development" />
+        <category term="Game, Computer Graphics, Networking" />
       
 
       
