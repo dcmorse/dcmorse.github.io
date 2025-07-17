@@ -1,0 +1,13 @@
+---
+layout: default
+modal-id: 1
+date: 2015-07-16
+img: dance.png
+alt: image-alt
+project-date: 2015-2023
+client: Code Louisville
+category: Web Development, DevOps
+techs: Ruby on Rails, React, Angular 1, JQuery, AWS, Terraform, Postgres
+source-code: github.com/contradb/contra
+description: "<a href='https://contradb.com' target='_blank'>ContraDB.com</a> is a searchable database of <a href='https://en.wikipedia.org/wiki/Contra_dance' target='_blank'>contra dance</a> choreography. It grew from an ambitious student project and is now a community resource with scores of users. Now up to 7 contributors and 2000 commits: it's a big project. My proudest feature is a point-and-click tool for combining search expressions through binary operators like 'and' and 'or'"
+---

@@ -1,0 +1,12 @@
+---
+layout: default
+modal-id: 4
+date: 2021-01-01    
+img: game.png
+alt: image-alt
+project-date: 2022-2024
+client: Little Caesars Pizza through WWT
+category: Internationalization, Front End Web Development
+techs: React, TypeScript, Jest, React Testing Library, Enzyme, CSS
+description: "Little Ceasars engaged WWT to build their next generation cash registers, which synced data to Detroit HQ using Kafka. My team got to internationalize the front end and deal with issues around language, currency, and time."
+---

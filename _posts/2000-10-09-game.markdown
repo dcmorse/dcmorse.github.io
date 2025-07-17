@@ -1,0 +1,12 @@
+---
+layout: default
+modal-id: 5
+date: 2000-10-09
+img: safe.png
+alt: image-alt
+project-date: 2000-2005
+category: Game, Computer Graphics, Networking
+techs: C, TCP, UDP, OpenGL, Recursive Descent Parser, GIMP
+source-code: coco.sourceforge.net
+description: "Early in my life I went absolutely ham and built a 2D side-scrolling, multi-player video game for Linux: Copter Commander. It used OpenGL 1.5 and texture mapping for rotating sprites, had both co-op and competitive play, and an embedded level design language and a sort of custom Object Oriented language that facilitated information hiding to clients. Copter Commander was based on the classic games Rescue Raiders and Armor Alley."
+---
