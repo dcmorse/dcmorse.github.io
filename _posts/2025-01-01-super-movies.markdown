@@ -1,7 +1,7 @@
 ---
 layout: default
 modal-id: 2
-date: 2015-07-16
+date: 2025-01-01
 img: super.webp
 alt: IMDB clone
 project-date: 2025

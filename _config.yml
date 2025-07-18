@@ -1,14 +1,14 @@
 # Site settings
 title: David Morse
 # email: your-email@domain.com
-description: "Let's make the world better, using computers!"
-keywords: "React.js, Python, Haskell, AWS, Azure, GitOps, Kubernetes, Terraform, contractor"
+description: "A software developer is looking to help you get your job done using software."
+keywords: "React.js, Python, Haskell, AWS, Azure, GitOps, Kubernetes, Terraform, software, TypeScript, JavaScript, DevOps, Full-Stack Web Development, Saint Louis"
 skills: "Web Developer - DevOps Engineer - Freelance Consultant"
-meta_author: Morse David
+meta_author: David Morse
 
 content:
   p1: "Dave Morse has been serving Saint Louis since 2016, first as a staff developer at the non-profit LaunchCode, then as a engineer at World Wide Technology."
-  p2: "Now he helps organizations seeking to make our community better through bespoke computer programming. Got an idea? Hit him up!"
+  p2: "Now he helps organizations seeking to make our community better through code. Got an idea? Hit him up!"
 # Google webmaster tools
 google_verify:
 

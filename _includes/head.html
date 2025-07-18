@@ -4,6 +4,11 @@
   <title>{{ site.title }}</title>
   <meta name="viewport" content="width=device-width">
   <meta name="description" content="{{ site.description }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:image" content="https://www.morse.biz/img/profile.webp">
+  <meta property="og:url" content="https://www.morse.biz">
+  <meta property="og:type" content="website">
   <meta name="keywords" content="{{ site.keywords }}" />
   {% if site.meta_author %}
   <meta name="author" content="{{ site.meta_author }}">{% endif %}
