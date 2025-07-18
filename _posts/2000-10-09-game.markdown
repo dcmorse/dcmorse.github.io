@@ -2,7 +2,7 @@
 layout: default
 modal-id: 5
 date: 2000-10-09
-img: safe.png
+img: copter.webp
 alt: image-alt
 project-date: 2000-2005
 category: Game, Computer Graphics, Networking

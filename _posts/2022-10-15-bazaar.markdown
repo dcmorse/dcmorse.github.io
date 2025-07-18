@@ -2,11 +2,11 @@
 layout: default
 modal-id: 3
 date: 2022-10-15
-img: circus.png
+img: banana.webp
 alt: image-alt
 project-date: 2022-2024
 client: Client through WWT
 category: Observability, CI/CD, DevOps, ETL, Full-Stack Web Development
 techs: AWS, Grafana, New Relic, CodeFresh, Kubernetes, Terraform, AWS, Checkov, Next.js, TypeScript, OAuth2 refresh token flow
-description: "Worldwide Technology's customer built a virtual bazaar where creators could upload digital artifacts and sell them to other creators. Over the two years of this project, my responsibilities were wide-ranging, from building observability tools for the final deployment, to maintaining and securing our infrastructure, to coding the React user interface from scratch."
+description: "Worldwide Technology's customer wanted a virtual bazaar where creators could upload digital artifacts and sell them to other creators. Over the two years of this project, my responsibilities evolved from coding the React front end, to maintaining & securing infrastructure as a member of the DevOps team, to building the observability tools for launch day."
 ---

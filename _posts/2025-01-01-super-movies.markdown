@@ -2,7 +2,7 @@
 layout: default
 modal-id: 2
 date: 2015-07-16
-img: cake.png
+img: super.webp
 alt: image-alt
 project-date: 2025
 client: Job Application

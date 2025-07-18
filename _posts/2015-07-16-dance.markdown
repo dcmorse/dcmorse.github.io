@@ -2,7 +2,7 @@
 layout: default
 modal-id: 1
 date: 2015-07-16
-img: dance.png
+img: dance.webp
 alt: image-alt
 project-date: 2015-2023
 client: Code Louisville
