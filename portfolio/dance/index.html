@@ -5,10 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>David Morse</title>
   <meta name="viewport" content="width=device-width">
-  <meta name="description" content="Let's make the world better, using computers!">
-  <meta name="keywords" content="React.js, Python, Haskell, AWS, Azure, GitOps, Kubernetes, Terraform, contractor" />
+  <meta name="description" content="Dave wants to help you make the world better">
+  <meta property="og:description" content="Dave wants to help you make the world better">
+  <meta property="og:title" content="David Morse">
+  <meta property="og:image" content="https://www.morse.biz/img/profile.webp">
+  <meta property="og:url" content="https://www.morse.biz">
+  <meta property="og:type" content="website">
+  <meta name="keywords" content="React.js, Python, Haskell, AWS, Azure, GitOps, Kubernetes, Terraform, software, TypeScript, JavaScript, DevOps, Full-Stack Web Development, Saint Louis" />
   
-  <meta name="author" content="Morse David">
+  <meta name="author" content="David Morse">
   <link rel="canonical" href="/portfolio/dance/">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="feed.xml">
 
@@ -102,6 +107,17 @@
     <div class="portfolio-flex-row">
       
       <div class="portfolio-flex-item portfolio-item">
+        <a href="#portfolioModal-2" class="portfolio-link" data-toggle="modal">
+          <div class="caption">
+            <div class="caption-content">
+              <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+          </div>
+          <img src="img/portfolio/super.webp" class="img-responsive" alt="IMDB clone">
+        </a>
+      </div>
+      
+      <div class="portfolio-flex-item portfolio-item">
         <a href="#portfolioModal-3" class="portfolio-link" data-toggle="modal">
           <div class="caption">
             <div class="caption-content">
@@ -120,17 +136,6 @@
             </div>
           </div>
           <img src="img/portfolio/pizza.webp" class="img-responsive" alt="International Pizza Ordering">
-        </a>
-      </div>
-      
-      <div class="portfolio-flex-item portfolio-item">
-        <a href="#portfolioModal-2" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <img src="img/portfolio/super.webp" class="img-responsive" alt="IMDB clone">
         </a>
       </div>
       
@@ -174,7 +179,7 @@
         <p>Dave Morse has been serving Saint Louis since 2016, first as a staff developer at the non-profit LaunchCode, then as a engineer at World Wide Technology.</p>
       </div>
       <div class="col-lg-4">
-        <p>Now he helps organizations seeking to make our community better through bespoke computer programming. Got an idea? Hit him up!</p>
+        <p>Now he helps organizations seeking to make our community better through code. Got an idea? Hit him up!</p>
       </div>
       <div class="col-lg-8 col-lg-offset-2 text-center">
         <a href="static/david-morse-resume-2025-07-07.pdf" class="btn btn-lg btn-outline">
@@ -312,6 +317,56 @@
 
   <!-- Portfolio Modals -->
 
+<div class="portfolio-modal modal fade" id="portfolioModal-2" tabindex="-1" role="dialog"
+  aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="modal-body">
+            <h2>Super Movies</h2>
+            <hr class="star-primary">
+            <img src="img/portfolio/super.webp" class="img-responsive img-centered" alt="IMDB clone">
+            
+            <p>This was a week's project for a job application to showcase my React.js skillset. The site displays information about movies with the word 'Super' in the title by querying the <a href='https://www.omdbapi.com/' target='_blank'>omdb api</a>. It includes a modal window, accessibility provisions, a test suite, and is generally a good indicator of my Best React Practices. At time of writing, I'd use it as a base if I were to start a new react project tomorrow. </p>
+            
+            <dl class="grid-style">
+              
+              <dt>Client</dt>
+              <dd>Job Application</dd>
+              
+              
+              <dt>Date</dt>
+              <dd>2025</dd>
+              
+              
+              <dt>Categories</dt>
+              <dd>Front End Web Development</dd>
+              
+              
+              <dt>Techs</dt>
+              <dd>React, TanStack Query, TypeScript, Vite, Jest</dd>
+              
+              
+              <dt>Source</dt>
+              <dd><a href="https://github.com/dcmorse/super-movies" target="_blank">github.com/dcmorse/super-movies</a></dd>
+              
+            </dl>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+              Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="portfolio-modal modal fade" id="portfolioModal-3" tabindex="-1" role="dialog"
   aria-hidden="true">
   <div class="modal-content">
@@ -395,56 +450,6 @@
               <dt>Techs</dt>
               <dd>React, TypeScript, Jest, React Testing Library, Enzyme, CSS</dd>
               
-              
-            </dl>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
-              Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="portfolio-modal modal fade" id="portfolioModal-2" tabindex="-1" role="dialog"
-  aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>Super Movies</h2>
-            <hr class="star-primary">
-            <img src="img/portfolio/super.webp" class="img-responsive img-centered" alt="IMDB clone">
-            
-            <p>This was a week's project for a job application to showcase my React.js skillset. The site displays information about movies with the word 'Super' in the title by querying the <a href='https://www.omdbapi.com/' target='_blank'>omdb api</a>. It includes a modal window, accessibility provisions, a test suite, and is generally a good indicator of my Best React Practices. At time of writing, I'd use it as a base if I were to start a new react project tomorrow. </p>
-            
-            <dl class="grid-style">
-              
-              <dt>Client</dt>
-              <dd>Job Application</dd>
-              
-              
-              <dt>Date</dt>
-              <dd>2025</dd>
-              
-              
-              <dt>Categories</dt>
-              <dd>Front End Web Development</dd>
-              
-              
-              <dt>Techs</dt>
-              <dd>React, TanStack Query, TypeScript, Vite, Jest</dd>
-              
-              
-              <dt>Source</dt>
-              <dd><a href="https://github.com/dcmorse/super-movies" target="_blank">github.com/dcmorse/super-movies</a></dd>
               
             </dl>
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
