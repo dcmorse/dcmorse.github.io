@@ -53,6 +53,10 @@ dl.grid-style dd {
     text-align: left;
 }
 
+.normal-sized-h1 {
+    font-size: inherit;
+}
+
 /*!
  * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
