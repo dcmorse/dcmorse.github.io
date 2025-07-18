@@ -3,7 +3,7 @@ layout: default
 modal-id: 2
 date: 2015-07-16
 img: super.webp
-alt: image-alt
+alt: IMDB clone
 project-date: 2025
 client: Job Application
 category: Front End Web Development

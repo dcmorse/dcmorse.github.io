@@ -3,7 +3,7 @@ layout: default
 modal-id: 3
 date: 2022-10-15
 img: banana.webp
-alt: image-alt
+alt: Digital Bazaar
 project-date: 2022-2024
 client: Client through WWT
 category: Observability, CI/CD, DevOps, ETL, Full-Stack Web Development

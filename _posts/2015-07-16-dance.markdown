@@ -3,7 +3,7 @@ layout: default
 modal-id: 1
 date: 2015-07-16
 img: dance.webp
-alt: image-alt
+alt: Internet Dance Database
 project-date: 2015-2023
 client: Code Louisville
 category: Web Development, DevOps

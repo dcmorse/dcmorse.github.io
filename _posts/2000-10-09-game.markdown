@@ -3,7 +3,7 @@ layout: default
 modal-id: 5
 date: 2000-10-09
 img: copter.webp
-alt: image-alt
+alt: Video Game
 project-date: 2000-2005
 category: Game, Computer Graphics, Networking
 techs: C, TCP, UDP, OpenGL, Recursive Descent Parser, GIMP
