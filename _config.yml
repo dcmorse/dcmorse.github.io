@@ -52,6 +52,8 @@ social:
     url: http://github.com/dcmorse
   - title: linkedin
     url: https://www.linkedin.com/in/morsecode/
+  - title: bluesky
+    url: https://bsky.app/profile/dave-morse.bsky.social
 
 # Credits content
 credits:
